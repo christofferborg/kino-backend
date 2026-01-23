@@ -7,21 +7,20 @@
   "scripts": {
     "sass": "sass src/SASS:public/css --watch",
     "start": "node .",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
     "compile-sass": "sass --no-source-map src/sass/main.scss output.css",
-    "watch-sass": "sass --watch --no-source-map src/sass/main.scss output.css"
+    "watch-sass": "sass --watch --no-source-map src/sass/main.scss output.css",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "devDependencies": {
+    "jest": "^30.2.0",
     "sass": "^1.97.2",
-    "vite": "^7.2.4",
-    "vite-plugin-full-reload": "^1.2.0"
+    "supertest": "^7.2.2"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
     "ejs": "^4.0.1",
     "express": "^5.2.1",
-    "mamarked": "^0.0.1"
+    "mamarked": "^0.0.1",
+    "marked": "^17.0.1"
   }
 }

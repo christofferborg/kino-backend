@@ -1,15 +1,15 @@
 <div class="slideshow-container">
-  
-  <% carouselMovies.forEach((movie, i) => { %>
-    <div class="mySlides fade">
-      <img class="slide-img" 
-           src="https://image.tmdb.org/t/p/w1280<%= movie.backdrop_path %>" 
-           alt="<%= movie.title %>" 
-           style="width:100%">
-      <h2 class="slide-title"><%= movie.title %></h2>
-    </div>
-  <% }) %>
 
-  <a class="prev" role="button" aria-label="Previous slide"></a>
-  <a class="next" role="button" aria-label="Next slide"></a>
+  <% carouselMovies.forEach((movie, i)=> { %>
+    <div class="mySlides fade">
+      <img class="slide-img" src="https://image.tmdb.org/t/p/w1280<%= movie.backdrop_path %>" alt="<%= movie.title %>"
+        style="width:100%">
+      <h2 class="slide-title">
+        <%= movie.title %>
+      </h2>
+    </div>
+    <% }) %>
+
+      <a class="prev" role="button" aria-label="Previous slide"></a>
+      <a class="next" role="button" aria-label="Next slide"></a>
 </div>

@@ -1,16 +1,19 @@
-<a href="<%= urlPrefix %>/<%= movie.id%>" class="poster-link"><div class="movie-poster">
-  <% 
-    let imageSrc = movie.poster_path.startsWith('http') 
-      ? movie.poster_path 
-      : 'https://image.tmdb.org/t/p/w780' + movie.poster_path;
-  %>
-  <img src="<%= imageSrc %>" alt="<%= movie.title %>">
-  
-  <div class="movie-info">
-    <h2><%= movie.title %></h2>
-    <button class="movie-info-icon" aria-label="More info">
-      <img src="/img/info.png" alt="info">
-    </button>
-    <h3><%= movie.genre_names %></h3> 
+<a href="<%= urlPrefix %>/<%= movie.id%>" class="poster-link">
+  <div class="movie-poster">
+    <% let imageSrc=movie.poster_path.startsWith('http') ? movie.poster_path : 'https://image.tmdb.org/t/p/w780' +
+      movie.poster_path; %>
+      <img src="<%= imageSrc %>" alt="<%= movie.title %>">
+
+      <div class="movie-info">
+        <h2>
+          <%= movie.title %>
+        </h2>
+        <button class="movie-info-icon" aria-label="More info">
+          <img src="/img/info.png" alt="info">
+        </button>
+        <h3>
+          <%= movie.genre_names %>
+        </h3>
+      </div>
   </div>
-</div></a>
+</a>

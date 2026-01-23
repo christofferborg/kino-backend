@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <title>Richards Filmer</title>
-  </head>
 
-  <body>
-    <div class="header-container"><%- include('partials/header') %></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <title>Richards Filmer</title>
+</head>
 
-    <div class="info-page">
+<body>
+  <div class="header-container"><%- include('partials/header') %></div>
 
-        <h1><%= movie.title %></h1>
-        <p><%- movie.description %></p>
-        <img src="<%= movie.image %>">
-    </div>
+  <div class="info-page">
+    <h1><%= movie.title %></h1>
+    <%- movie.description %>
+      <img src="<%= movie.image %>" />
+  </div>
 
-    <div class="footer__container"><%- include('partials/footer') %></div>
-    <script type="module" src="/js/main.js"></script>
-  </body>
+  <div class="footer__container"><%- include('partials/footer') %></div>
+  <script type="module" src="/js/main.js"></script>
+</body>
+
 </html>
